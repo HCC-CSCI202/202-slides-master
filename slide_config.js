@@ -22,12 +22,12 @@ var SLIDE_CONFIG = {
 
   // Author information
   presenters: [{
-    name: 'Firstname Lastname',
-    company: 'Job Title<br>Google',
-    gplus: 'http://plus.google.com/1234567890',
-    twitter: '@yourhandle',
-    www: 'http://www.you.com',
-    github: 'http://github.com/you'
+    name: 'Tyler Youngblood',
+    company: 'Instructor<br>Highline.edu',
+    gplus: '',
+    twitter: '',
+    www: '',
+    github: 'http://github.com/tyleryoungblood'
   }/*, {
     name: 'Second Name',
     company: 'Job Title, Google',
