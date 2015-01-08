@@ -301,17 +301,18 @@ slides > slide.dark {
 /* line 135, ../scss/default.scss */
 slides > slide:not(.nobackground):before {
   font-size: 12pt;
-  content: "";
+  content: "Bla";
   position: absolute;
   bottom: 20px;
   left: 60px;
-  background: url(../../images/google_developers_icon_128.png) no-repeat 0 50%;
-  -webkit-background-size: 30px 30px;
-  -moz-background-size: 30px 30px;
-  -o-background-size: 30px 30px;
-  background-size: 30px 30px;
+  background: url(../../images/html5-css3-49x30.png) no-repeat 0 50%;
+  -webkit-background-size: 49px 30px;
+  -moz-background-size: 49px 30px;
+  -o-background-size: 49px 30px;
+  background-size: 49px 30px;
   padding-left: 40px;
   height: 30px;
+  width: 49px;
   line-height: 1.9;
 }
 /* line 147, ../scss/default.scss */
