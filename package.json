@@ -23,6 +23,7 @@
   "homepage": "https://github.com/HCC-CSCI202/202-slides-master",
   "devDependencies": {
     "browser-sync": "^1.8.3",
-    "gulp": "^3.8.10"
+    "gulp": "^3.8.10",
+    "gulp-sass": "^1.2.4"
   }
 }
