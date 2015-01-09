@@ -1,0 +1,27 @@
+{
+  "name": "202-slides-master",
+  "version": "1.0.0",
+  "description": "HTML5 slide deck adaptation of Google IO Slides",
+  "main": "slide_config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HCC-CSCI202/202-slides-master.git"
+  },
+  "keywords": [
+    "HTML5",
+    "Slide",
+    "Deck"
+  ],
+  "author": "Tyler Youngblood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HCC-CSCI202/202-slides-master/issues"
+  },
+  "homepage": "https://github.com/HCC-CSCI202/202-slides-master",
+  "devDependencies": {
+    "gulp": "^3.8.10"
+  }
+}
