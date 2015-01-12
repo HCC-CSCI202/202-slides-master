@@ -1,6 +1,4 @@
 @import "base"; 
-@import "compass/css3/columns";
-@import "compass/css3/user-interface";
 
 @mixin highlight-color($color: $brand-yellow) {
   -webkit-tap-highlight-color: $color;
@@ -11,7 +9,7 @@
 }
 
 @mixin backdrop {
-  @include background(linear-gradient(white, white 85%, $gray-1));
+  background: linear-gradient(white, white 85%, $gray-1);
   background-color: white;
 }
 
@@ -22,7 +20,7 @@
 ::selection {
   color: white;
   background-color: $brand-yellow;
-  @include text-shadow(none);
+  text-shadow: none;
 }
 
 ::-webkit-scrollbar {
@@ -36,7 +34,7 @@
   border: solid transparent;
   min-height: 28px;
   padding: 100px 0 0;
-  @include box-shadow(inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07));
+  box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
   border-width: 1px 1px 1px 6px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -72,9 +70,9 @@ slides > slide {
   margin-top: -$slide-height / 2;
   padding: $slide-top-bottom-padding $slide-left-right-padding;
 
-  @include border-radius($slide-border-radius);
+  border-radius: $slide-border-radius;
   //@include box-shadow(5px 5px 20px $gray-4);
-  @include transition(all 0.6s ease-in-out);
+  transition: all 0.6s ease-in-out;
 
   //$translateX: 1020px;
   //$rotateY: 30deg;
@@ -105,7 +103,7 @@ slides > slide {
     }
 
     .gdbar {
-      @include background-size(100% 100%);
+      background-size: 100% 100%;
     }
   }
 
@@ -129,8 +127,8 @@ slides > slide {
   }
 
   &:not(.nobackground) {
-    //background: white url(../../images/google_developers_icon_128.png) ($brand-small-icon-size * 2) 98% no-repeat;
-    //@include background-size($brand-small-icon-size $brand-small-icon-size);
+    //background: white url(../../images/google_developers_icon_128.png) ($brand-small-icon-size-width * 2) 98% no-repeat;
+    //@include background-size($brand-small-icon-size-width $brand-small-icon-size-height);
 
     &:before {
       font-size: 12pt;
@@ -138,10 +136,10 @@ slides > slide {
       position: absolute;
       bottom: $slide-top-bottom-padding / 2;
       left: $slide-left-right-padding;
-      background: url(../../images/google_developers_icon_128.png) no-repeat 0 50%;
-      @include background-size($brand-small-icon-size $brand-small-icon-size);
-      padding-left: $brand-small-icon-size + 10;
-      height: $brand-small-icon-size;
+      background: url(../../images/html5-css3-49x30.png) no-repeat 0 50%;
+      background-size: $brand-small-icon-size-width $brand-small-icon-size-height;
+      padding-left: $brand-small-icon-size-width + 10;
+      height: $brand-small-icon-size-height;
       line-height: 1.9;
     }
     &:after {
@@ -217,8 +215,8 @@ slides.layout-faux-widescreen {
   > slide.far-past {
     display: block;
     display: none;
-    @include transform(translate(-$translateX * 2));
-    @include transform(translate3d(-$translateX * 2, 0, 0));
+    transform: translate(-$translateX * 2);
+    transform: translate3d(-$translateX * 2, 0, 0);
   }
 
   > slide.past {
@@ -246,8 +244,8 @@ slides.layout-faux-widescreen {
   > slide.far-next {
     display: block;
     display: none;
-    @include transform(translate($translateX * 2));
-    @include transform(translate3d($translateX * 2, 0, 0));
+    transform: translate($translateX * 2);
+    transform: translate3d($translateX * 2, 0, 0);
   }
 
   #prev-slide-area {
@@ -327,7 +325,7 @@ ul {
 .highlight-code slide.current {
   pre > * {
     opacity: 0.25;
-    @include transition(opacity 0.5s ease-in);
+    transition: opacity 0.5s ease-in;
   }
   b {
     opacity: 1;
@@ -345,7 +343,7 @@ pre {
   background-color: $gray-1;
   left: -$slide-left-right-padding;
   position: relative;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
   /*overflow: hidden;*/
 
   &[data-lang]:after {
@@ -376,7 +374,7 @@ iframe {
   height: $slide-height - ($slide-top-bottom-padding * 2) - ($article-content-top-padding * 2);
   background: white;
   border: 1px solid $gray-1;
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 dt {
@@ -385,15 +383,15 @@ dt {
 
 button {
   display: inline-block;
-  @include background(linear-gradient(#F9F9F9 40%, #E3E3E3 70%));
+  background: linear-gradient(#F9F9F9 40%, #E3E3E3 70%);
   border: 1px solid $gray-2;
-  @include border-radius(3px);
+  border-radius: 3px;
   padding: 5px 8px;
   outline: none;
   white-space: nowrap;
-  @include user-select(none);
+  user-select: none;
   cursor: pointer;
-  @include text-shadow(1px 1px #fff);
+  text-shadow: 1px 1px #fff;
   font-size: 10pt;
 }
 
@@ -402,7 +400,7 @@ button:not(:disabled):hover {
 }
 
 button:not(:disabled):active {
-  @include background(linear-gradient(#E3E3E3 40%, #F9F9F9 70%));
+  background: linear-gradient(#E3E3E3 40%, #F9F9F9 70%);
 }
 
 :disabled {
@@ -466,7 +464,7 @@ button:not(:disabled):active {
 }
 
 .columns-2 {
-  @include column-count(2);
+  column-count: 2;
 }
 
 table {
@@ -488,7 +486,7 @@ table {
   th {
     color: white;
     font-size: 18px;
-    @include background(linear-gradient(top, $brand-blue 40%, $brand-blue-secondary2 80%) no-repeat);
+    background: linear-gradient(top, $brand-blue 40%, $brand-blue-secondary2 80%) no-repeat;
   }
 
   td, th {
@@ -498,7 +496,7 @@ table {
 
   td.highlight {
     color: $gray-4;
-    @include background(linear-gradient(top, $brand-yellow 40%, $brand-yellow-secondary2 80%) no-repeat);
+    background: linear-gradient(top, $brand-yellow 40%, $brand-yellow-secondary2 80%) no-repeat;
   }
 
   &.rows {
@@ -525,8 +523,8 @@ q {
 
 slide.fill {
   background-repeat: no-repeat;
-  @include border-radius($slide-border-radius);
-  @include background-size(cover);
+  border-radius: $slide-border-radius;
+  background-size: cover;
 }
 
 /* Size variants */
@@ -561,7 +559,7 @@ article.smaller {
 
 .build {
   > * {
-    @include transition(opacity 0.5s ease-in-out 0.2s);
+    transition: opacity 0.5s ease-in-out 0.2s;
   }
 
   .to-build {
@@ -632,15 +630,15 @@ article.smaller {
   pointer-events: none;
   @include flexbox;
   @include flex-center-center;
-  @include border-radius($slide-border-radius);
+  border-radius: $slide-border-radius;
 
-  @include box-sizing(border-box);
-  @include transform(translateY($slide-height / 2));@include transition(all 0.4s ease-in-out);
+  box-sizing: border-box;
+  transform: translateY($slide-height / 2); transition: all 0.4s ease-in-out;
 
   > section {
     background: #fff;
-    @include border-radius($slide-border-radius);
-    @include box-shadow(0 0 10px $gray-3);
+    border-radius: $slide-border-radius;
+    box-shadow: 0 0 10px $gray-3;
     width: 60%;
     padding: 2em;
   }
@@ -655,10 +653,10 @@ article.smaller {
     slides.layout-faux-widescreen {
       slide {
         &.next {
-          @include transform(translate3d($slide-width-widescreen / 2 + 140, 80px, 0) scale(0.35));
+          transform: translate3d($slide-width-widescreen / 2 + 140, 80px, 0) scale(0.35);
         }
         .note {
-          @include transform(translate3d(300px, $slide-height + 100, 0) scale(1.5));
+          transform: translate3d(300px, $slide-height + 100, 0) scale(1.5);
         }
       }
     }
@@ -666,23 +664,23 @@ article.smaller {
     slide {
       overflow: visible;
       background: white;
-      @include transition(none); // No slide transition goodies when in presenter mode.
+      transition: none; // No slide transition goodies when in presenter mode.
       pointer-events: none;
-      @include transform-origin(0, 0); // For speaker note transition.
+      transform-origin: 0, 0; // For speaker note transition.
 
       &:not(.backdrop) {
-        @include transform(scale(0.6) translate3d(0.5em, 0.5em, 0));
-        @include box-shadow(0 0 10px $gray-3);
+        transform: scale(0.6) translate3d(0.5em, 0.5em, 0);
+        box-shadow: 0 0 10px $gray-3;
       }
 
       &.backdrop {
         //@include background(linear-gradient($gray-1, white 30%, white 60%, $gray-1));
-        @include background-image(radial-gradient(50% 50%, #b1dfff 0%,
-                                                  $brand-blue 600px));
+        background-image: radial-gradient(50% 50%, #b1dfff 0%,
+                                                  $brand-blue 600px);
       }
 
       &.next {
-        @include transform(translate3d($slide-width / 2 + 120, 80px, 0) scale(0.35));
+        transform: translate3d($slide-width / 2 + 120, 80px, 0) scale(0.35);
         opacity: 1 !important;
 
         .note {
@@ -697,18 +695,18 @@ article.smaller {
       background: $gray-1;
       padding: 0;
 
-      @include box-shadow(0 0 10px $gray-3);
+      box-shadow: 0 0 10px $gray-3;
 
-      @include transform(translate3d(250px, $slide-height + 100, 0) scale(1.5));
-      @include transition(opacity 400ms ease-in-out);
+      transform: translate3d(250px, $slide-height + 100, 0) scale(1.5);
+      transition: opacity 400ms ease-in-out;
 
       > section {
         background: #fff;
-        @include border-radius($slide-border-radius);
+        border-radius: $slide-border-radius;
         height: 100%;
         width: 100%;
-        @include box-sizing(border-box);
-        @include box-shadow(none);
+        box-sizing: border-box;
+        box-shadow: none;
         overflow: auto;
         padding: 1em;
       }
@@ -717,7 +715,7 @@ article.smaller {
 
   .note {
     opacity: 1;
-    @include transform(translateY(0));
+    transform: translateY(0);
     pointer-events: auto; // Allow people to do things like open links embedded in the speaker notes.
   }
 }
@@ -765,7 +763,7 @@ article.smaller {
 }
 
 .auto-fadein {
-  @include transition(opacity 0.6s ease-in 1s);
+  transition: opacity 0.6s ease-in 1s;
   opacity: 0;
 }
 
@@ -851,20 +849,20 @@ aside.gdbar {
   position: absolute;
   left: -1px;
   top: 125px;
-  @include border-radius(0 10px 10px 0);
-  @include background(linear-gradient(left, $gray-1, $gray-1) no-repeat);
-  @include background-size(0% 100%);
-  @include transition(all 0.5s ease-out 0.5s); /* Better to transition only on background-size, but not sure how to do that with the mixin. */
+  border-radius: 0 10px 10px 0;
+  background: linear-gradient(left, $gray-1, $gray-1) no-repeat;
+  background-size: 0% 100%;
+  transition: all 0.5s ease-out 0.5s; /* Better to transition only on background-size, but not sure how to do that with the mixin. */
 
   &.right {
     right: 0;
     left: -moz-initial;
     left: initial;
     top: ($slide-height / 2) - 96; /* 96 is height of gray icon bar */
-    @include transform(rotateZ(180deg));
+    transform: rotateZ(180deg);
 
     img {
-      @include transform(rotateZ(180deg));
+      transform: rotateZ(180deg);
     }
   }
 
@@ -875,7 +873,7 @@ aside.gdbar {
   }
 
   img {
-    width: 85px;
+    // width: 85px;
     height: 85px;
     position: absolute;
     right: 0;
@@ -979,7 +977,7 @@ aside.gdbar {
       display: block !important;
       position: relative;
       @include backdrop();
-      @include transform(none !important);
+      transform: none !important;
       width: 100%;
       height: 100%;
       page-break-after:always;
@@ -1002,7 +1000,7 @@ aside.gdbar {
 
       .build {
         > * {
-          @include transition(none);
+          transition: none;
         }
 
         .to-build,
