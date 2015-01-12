@@ -1,3 +1,36 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 /**
  * Base SlideDeck Styles
  */
@@ -34,8 +67,11 @@ slides {
   position: absolute;
   left: 0;
   top: 0;
+  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+  -webkit-perspective: 1000;
   perspective: 1000;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   transition: opacity 800ms ease-in 100ms; }
 
@@ -81,6 +117,10 @@ slide.fill img {
 /**
  * Theme Styles
  */
+::-moz-selection {
+  color: white;
+  background-color: #ffd14d;
+  text-shadow: none; }
 ::selection {
   color: white;
   background-color: #ffd14d;
@@ -202,7 +242,10 @@ slides.layout-widescreen > slide, slides.layout-faux-widescreen > slide {
 slides.layout-widescreen > slide.far-past, slides.layout-faux-widescreen > slide.far-past {
   display: block;
   display: none;
+  -webkit-transform: translate(-2260px);
+  -ms-transform: translate(-2260px);
   transform: translate(-2260px);
+  -webkit-transform: translate3d(-2260px, 0, 0);
   transform: translate3d(-2260px, 0, 0); }
 slides.layout-widescreen > slide.past, slides.layout-faux-widescreen > slide.past {
   display: block;
@@ -217,7 +260,10 @@ slides.layout-widescreen > slide.next, slides.layout-faux-widescreen > slide.nex
 slides.layout-widescreen > slide.far-next, slides.layout-faux-widescreen > slide.far-next {
   display: block;
   display: none;
+  -webkit-transform: translate(2260px);
+  -ms-transform: translate(2260px);
   transform: translate(2260px);
+  -webkit-transform: translate3d(2260px, 0, 0);
   transform: translate3d(2260px, 0, 0); }
 slides.layout-widescreen #prev-slide-area, slides.layout-faux-widescreen #prev-slide-area {
   margin-left: -650px; }
@@ -326,6 +372,9 @@ button {
   padding: 5px 8px;
   outline: none;
   white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   text-shadow: 1px 1px #fff;
@@ -395,6 +444,8 @@ button:not(:disabled):active {
   color: black !important; }
 
 .columns-2 {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
   column-count: 2; }
 
 table {
@@ -510,8 +561,6 @@ article.smaller q {
   background: rgba(0, 0, 0, 0.3);
   opacity: 0;
   pointer-events: none;
-  display: -webkit-box !important;
-  display: -moz-box !important;
   display: -ms-box !important;
   display: -o-box !important;
   display: box !important;
@@ -520,6 +569,8 @@ article.smaller q {
   box-pack: center;
   border-radius: 5px;
   box-sizing: border-box;
+  -webkit-transform: translateY(350px);
+  -ms-transform: translateY(350px);
   transform: translateY(350px);
   transition: all 0.4s ease-in-out; }
   .note > section {
@@ -530,21 +581,27 @@ article.smaller q {
     padding: 2em; }
 
 .with-notes.popup slides.layout-widescreen slide.next, .with-notes.popup slides.layout-faux-widescreen slide.next {
+  -webkit-transform: translate3d(690px, 80px, 0) scale(0.35);
   transform: translate3d(690px, 80px, 0) scale(0.35); }
 .with-notes.popup slides.layout-widescreen slide .note, .with-notes.popup slides.layout-faux-widescreen slide .note {
+  -webkit-transform: translate3d(300px, 800px, 0) scale(1.5);
   transform: translate3d(300px, 800px, 0) scale(1.5); }
 .with-notes.popup slide {
   overflow: visible;
   background: white;
   transition: none;
   pointer-events: none;
+  -webkit-transform-origin: 0, 0;
+  -ms-transform-origin: 0, 0;
   transform-origin: 0, 0; }
   .with-notes.popup slide:not(.backdrop) {
+    -webkit-transform: scale(0.6) translate3d(0.5em, 0.5em, 0);
     transform: scale(0.6) translate3d(0.5em, 0.5em, 0);
     box-shadow: 0 0 10px #797979; }
   .with-notes.popup slide.backdrop {
     background-image: radial-gradient(50% 50%, #b1dfff 0%, #4387fd 600px); }
   .with-notes.popup slide.next {
+    -webkit-transform: translate3d(570px, 80px, 0) scale(0.35);
     transform: translate3d(570px, 80px, 0) scale(0.35);
     opacity: 1 !important; }
     .with-notes.popup slide.next .note {
@@ -555,6 +612,7 @@ article.smaller q {
   background: #e6e6e6;
   padding: 0;
   box-shadow: 0 0 10px #797979;
+  -webkit-transform: translate3d(250px, 800px, 0) scale(1.5);
   transform: translate3d(250px, 800px, 0) scale(1.5);
   transition: opacity 400ms ease-in-out; }
   .with-notes.popup .note > section {
@@ -568,6 +626,8 @@ article.smaller q {
     padding: 1em; }
 .with-notes .note {
   opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
   transform: translateY(0);
   pointer-events: auto; }
 
@@ -589,8 +649,6 @@ article.smaller q {
   box-reflect: below 3px linear-gradient(rgba(255, 255, 255, 0) 85%, white 150%); }
 
 .flexbox {
-  display: -webkit-box !important;
-  display: -moz-box !important;
   display: -ms-box !important;
   display: -o-box !important;
   display: box !important; }
@@ -678,7 +736,7 @@ aside.gdbar {
   left: -1px;
   top: 125px;
   border-radius: 0 10px 10px 0;
-  background: linear-gradient(left, #e6e6e6, #e6e6e6) no-repeat;
+  background: linear-gradient(to left, #e6e6e6, #e6e6e6) no-repeat;
   background-size: 0% 100%;
   transition: all 0.5s ease-out 0.5s;
   /* Better to transition only on background-size, but not sure how to do that with the mixin. */ }
@@ -688,8 +746,10 @@ aside.gdbar {
     left: initial;
     top: 254px;
     /* 96 is height of gray icon bar */
+    -webkit-transform: rotateZ(180deg);
     transform: rotateZ(180deg); }
     aside.gdbar.right img {
+      -webkit-transform: rotateZ(180deg);
       transform: rotateZ(180deg); }
   aside.gdbar.bottom {
     top: -moz-initial;
@@ -758,6 +818,8 @@ aside.gdbar {
     position: relative;
     background: linear-gradient(white, white 85%, #e6e6e6);
     background-color: white;
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
     transform: none !important;
     width: 100%;
     height: 100%;

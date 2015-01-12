@@ -12,7 +12,6 @@ slides > slide {
   margin-left: -$slide-width / 2 !important;
   margin-top: -$slide-height / 2 !important;
 */
-  -webkit-transition: none !important;
   transition: none !important; }
 
 /* iPhone 4 ----------- */
