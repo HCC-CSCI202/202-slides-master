@@ -9,20 +9,6 @@
   -o-font-smoothing: $val;
 }
 
-@mixin flexbox {
-  display: -webkit-box !important;
-  display: -moz-box !important;
-  display: -ms-box !important;
-  display: -o-box !important;
-  display: box !important;
-}
-
-@mixin flex-center-center {
-  box-orient: vertical;
-  box-align: center;
-  box-pack: center;
-}
-
 @mixin flex-left-center {
   box-orient: vertical;
   box-align: left;

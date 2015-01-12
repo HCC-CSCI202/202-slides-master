@@ -133,7 +133,8 @@ slides > slide {
 
     &:before {
       font-size: 12pt;
-      content: $social-tags;
+      // content: $social-tags;
+      content: 'CSCI 202 - Web Development II';
       position: absolute;
       bottom: $slide-top-bottom-padding / 2;
       left: $slide-left-right-padding;
@@ -629,8 +630,9 @@ article.smaller {
   background: rgba(0, 0, 0, 0.3);
   opacity: 0;
   pointer-events: none;
-  @include flexbox;
-  @include flex-center-center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: $slide-border-radius;
 
   box-sizing: border-box;

@@ -68,11 +68,11 @@ slides {
   left: 0;
   top: 0;
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   -webkit-perspective: 1000;
-  perspective: 1000;
+          perspective: 1000;
   -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+          transform-style: preserve-3d;
   transition: opacity 800ms ease-in 100ms; }
 
 slides > slide {
@@ -192,7 +192,7 @@ slides > slide {
     background: #515151 !important; }
   slides > slide:not(.nobackground):before {
     font-size: 12pt;
-    content: '';
+    content: 'CSCI 202 - Web Development II';
     position: absolute;
     bottom: 20px;
     left: 60px;
@@ -243,10 +243,10 @@ slides.layout-widescreen > slide.far-past, slides.layout-faux-widescreen > slide
   display: block;
   display: none;
   -webkit-transform: translate(-2260px);
-  -ms-transform: translate(-2260px);
-  transform: translate(-2260px);
+      -ms-transform: translate(-2260px);
+          transform: translate(-2260px);
   -webkit-transform: translate3d(-2260px, 0, 0);
-  transform: translate3d(-2260px, 0, 0); }
+          transform: translate3d(-2260px, 0, 0); }
 slides.layout-widescreen > slide.past, slides.layout-faux-widescreen > slide.past {
   display: block;
   opacity: 0; }
@@ -261,10 +261,10 @@ slides.layout-widescreen > slide.far-next, slides.layout-faux-widescreen > slide
   display: block;
   display: none;
   -webkit-transform: translate(2260px);
-  -ms-transform: translate(2260px);
-  transform: translate(2260px);
+      -ms-transform: translate(2260px);
+          transform: translate(2260px);
   -webkit-transform: translate3d(2260px, 0, 0);
-  transform: translate3d(2260px, 0, 0); }
+          transform: translate3d(2260px, 0, 0); }
 slides.layout-widescreen #prev-slide-area, slides.layout-faux-widescreen #prev-slide-area {
   margin-left: -650px; }
 slides.layout-widescreen #next-slide-area, slides.layout-faux-widescreen #next-slide-area {
@@ -373,9 +373,9 @@ button {
   outline: none;
   white-space: nowrap;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
   text-shadow: 1px 1px #fff;
   font-size: 10pt; }
@@ -445,8 +445,8 @@ button:not(:disabled):active {
 
 .columns-2 {
   -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2; }
+     -moz-column-count: 2;
+          column-count: 2; }
 
 table {
   width: 100%;
@@ -561,17 +561,20 @@ article.smaller q {
   background: rgba(0, 0, 0, 0.3);
   opacity: 0;
   pointer-events: none;
-  display: -ms-box !important;
-  display: -o-box !important;
-  display: box !important;
-  box-orient: vertical;
-  box-align: center;
-  box-pack: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 5px;
   box-sizing: border-box;
   -webkit-transform: translateY(350px);
-  -ms-transform: translateY(350px);
-  transform: translateY(350px);
+      -ms-transform: translateY(350px);
+          transform: translateY(350px);
   transition: all 0.4s ease-in-out; }
   .note > section {
     background: #fff;
@@ -582,27 +585,27 @@ article.smaller q {
 
 .with-notes.popup slides.layout-widescreen slide.next, .with-notes.popup slides.layout-faux-widescreen slide.next {
   -webkit-transform: translate3d(690px, 80px, 0) scale(0.35);
-  transform: translate3d(690px, 80px, 0) scale(0.35); }
+          transform: translate3d(690px, 80px, 0) scale(0.35); }
 .with-notes.popup slides.layout-widescreen slide .note, .with-notes.popup slides.layout-faux-widescreen slide .note {
   -webkit-transform: translate3d(300px, 800px, 0) scale(1.5);
-  transform: translate3d(300px, 800px, 0) scale(1.5); }
+          transform: translate3d(300px, 800px, 0) scale(1.5); }
 .with-notes.popup slide {
   overflow: visible;
   background: white;
   transition: none;
   pointer-events: none;
   -webkit-transform-origin: 0, 0;
-  -ms-transform-origin: 0, 0;
-  transform-origin: 0, 0; }
+      -ms-transform-origin: 0, 0;
+          transform-origin: 0, 0; }
   .with-notes.popup slide:not(.backdrop) {
     -webkit-transform: scale(0.6) translate3d(0.5em, 0.5em, 0);
-    transform: scale(0.6) translate3d(0.5em, 0.5em, 0);
+            transform: scale(0.6) translate3d(0.5em, 0.5em, 0);
     box-shadow: 0 0 10px #797979; }
   .with-notes.popup slide.backdrop {
     background-image: radial-gradient(50% 50%, #b1dfff 0%, #4387fd 600px); }
   .with-notes.popup slide.next {
     -webkit-transform: translate3d(570px, 80px, 0) scale(0.35);
-    transform: translate3d(570px, 80px, 0) scale(0.35);
+            transform: translate3d(570px, 80px, 0) scale(0.35);
     opacity: 1 !important; }
     .with-notes.popup slide.next .note {
       display: none !important; }
@@ -613,7 +616,7 @@ article.smaller q {
   padding: 0;
   box-shadow: 0 0 10px #797979;
   -webkit-transform: translate3d(250px, 800px, 0) scale(1.5);
-  transform: translate3d(250px, 800px, 0) scale(1.5);
+          transform: translate3d(250px, 800px, 0) scale(1.5);
   transition: opacity 400ms ease-in-out; }
   .with-notes.popup .note > section {
     background: #fff;
@@ -627,8 +630,8 @@ article.smaller q {
 .with-notes .note {
   opacity: 1;
   -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
   pointer-events: auto; }
 
 .source {
@@ -747,10 +750,10 @@ aside.gdbar {
     top: 254px;
     /* 96 is height of gray icon bar */
     -webkit-transform: rotateZ(180deg);
-    transform: rotateZ(180deg); }
+            transform: rotateZ(180deg); }
     aside.gdbar.right img {
       -webkit-transform: rotateZ(180deg);
-      transform: rotateZ(180deg); }
+              transform: rotateZ(180deg); }
   aside.gdbar.bottom {
     top: -moz-initial;
     top: initial;
@@ -819,8 +822,8 @@ aside.gdbar {
     background: linear-gradient(white, white 85%, #e6e6e6);
     background-color: white;
     -webkit-transform: none !important;
-    -ms-transform: none !important;
-    transform: none !important;
+        -ms-transform: none !important;
+            transform: none !important;
     width: 100%;
     height: 100%;
     page-break-after: always;

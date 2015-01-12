@@ -19,7 +19,6 @@ gulp.task('sass', function(){
   return gulp.src('theme/scss/**/*.scss')
     .pipe(sass())
     .pipe(autoprefixer({
-        broswers: [Chrome>20]
       }))
     .pipe(gulp.dest('theme/css'))
     // reload browser(s)
