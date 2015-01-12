@@ -231,7 +231,7 @@ slides > slide {
   slides > slide > article:only-child {
     height: 100%; }
     slides > slide > article:only-child > iframe {
-      height: 98%; }
+      height: 97%; }
 
 slides.layout-faux-widescreen > slide {
   padding: 40px 160px; }
@@ -356,7 +356,7 @@ code {
 
 iframe {
   width: 100%;
-  height: 530px;
+  height: 510px;
   background: white;
   border: 1px solid #e6e6e6;
   box-sizing: border-box; }
@@ -652,28 +652,56 @@ article.smaller q {
   box-reflect: below 3px linear-gradient(rgba(255, 255, 255, 0) 85%, white 150%); }
 
 .flexbox {
-  display: -ms-box !important;
-  display: -o-box !important;
-  display: box !important; }
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .flexbox.vcenter {
-  box-orient: vertical;
-  box-align: center;
-  box-pack: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
   width: 100%; }
+  .flexbox.vcenter img {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
 
 .flexbox.vleft {
-  box-orient: vertical;
-  box-align: left;
-  box-pack: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   height: 100%;
   width: 100%; }
 
 .flexbox.vright {
-  box-orien: vertical;
-  box-alig: end;
-  box-pac: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   height: 100%;
   width: 100%; }
 
@@ -787,6 +815,7 @@ aside.gdbar {
     font-size: 24px;
     position: absolute;
     bottom: 80px;
+    left: 100px;
     line-height: 1.4; }
 
 [data-config-contact] a {

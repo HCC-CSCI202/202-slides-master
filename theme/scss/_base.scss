@@ -9,16 +9,25 @@
   -o-font-smoothing: $val;
 }
 
+@mixin flexbox {
+  display: flex;
+}
+
+@mixin flex-center-center {
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin flex-left-center {
-  box-orient: vertical;
-  box-align: left;
-  box-pack: center;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 
 @mixin flex-right-center {
-  box-orien: vertical;
-  box-alig: end;
-  box-pac: center;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: flex-end;
 }
 
 /**

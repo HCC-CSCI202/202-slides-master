@@ -195,7 +195,7 @@ slides > slide {
     height: 100%;
 
     > iframe {
-      height: 98%;
+      height: 97%;
     }
   }
 }
@@ -373,7 +373,8 @@ code {
 
 iframe {
   width: 100%;
-  height: $slide-height - ($slide-top-bottom-padding * 2) - ($article-content-top-padding * 2);
+  // height: $slide-height - ($slide-top-bottom-padding * 2) - ($article-content-top-padding * 2);
+  height: 510px;
   background: white;
   border: 1px solid $gray-1;
   box-sizing: border-box;
@@ -749,9 +750,18 @@ article.smaller {
 
 .flexbox.vcenter {
   @include flex-center-center;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
+
+  img {
+    align-items: center;
+    justify-content: center;
+  }
 }
+
+
 
 .flexbox.vleft {
   @include flex-left-center;
@@ -918,6 +928,7 @@ aside.gdbar {
     font-size: 24px;
     position: absolute;
     bottom: 80px;
+    left: 100px;
     line-height: 1.4;
   }
 }
