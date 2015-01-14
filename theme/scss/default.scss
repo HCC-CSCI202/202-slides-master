@@ -1,5 +1,6 @@
 @import "css-reset"; 
 @import "base"; 
+@import "icomoon"; 
 
 @mixin highlight-color($color: $brand-yellow) {
   -webkit-tap-highlight-color: $color;
@@ -937,9 +938,13 @@ aside.gdbar {
   a {
     color: rgb(255, 255, 255);
     border-bottom: none;
+    vertical-align: middle;
+    font-size: smaller;
   }
   span {
-    width: 115px;
+    vertical-align: middle;
+    line-height: 1;
+    width: 50px;
     display: inline-block;
   }
 }

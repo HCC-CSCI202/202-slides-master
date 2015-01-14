@@ -24,9 +24,9 @@ var SLIDE_CONFIG = {
   presenters: [{
     name: 'Tyler Youngblood',
     company: 'Instructor<br>Highline.edu',
-    gplus: '',
-    twitter: '',
-    www: '',
+    gplus: '-',
+    twitter: '@tyleryoungblood',
+    www: 'Highline.edu',
     github: 'http://github.com/tyleryoungblood'
   }/*, {
     name: 'Second Name',
